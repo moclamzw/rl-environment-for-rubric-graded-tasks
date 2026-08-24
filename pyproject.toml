@@ -1,0 +1,20 @@
+[project]
+name = "rl-environment-for-rubric-graded-tasks"
+version = "0.1.0"
+description = "A sandboxed RL-style environment with rubric-based and programmatic graders, built as an environment-design exercise, including a demonstrated reward hack that the design then clos"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.6"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
